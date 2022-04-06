@@ -3,6 +3,16 @@ defmodule ElixirCLRut do
   A module that helps with validation and formatting
   of chilean [RUT/RUN identifiers](https://es.wikipedia.org/wiki/Rol_%C3%9Anico_Tributario).
   Made by the [Elixir Chile](https://elixircl.github.io) Community.
+
+  `ElixirCLRut` exposes 3 functions:
+
+    * `ElixirCLRut.from/1` - Converts a (presumably rut) string into the internal
+    representation `%ElixirCLRut.Rut{}`.
+    * `ElixirCLRut.is_valid?/2` - Receives a rut (string or `%ElixirCLRut.Rut{}`),
+    custom validators, and returns a boolean indicating whether it's valid or not.
+    * `ElixirCLRut.format/1` - Receives a rut (string or `%ElixirCLRut.Rut{}`),
+    and return a canonically formatted rut.
+
   """
   @moduledoc since: "1.0.0"
 
